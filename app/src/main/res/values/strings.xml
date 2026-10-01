@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FF Headshot Panel</string>
+    <string name="accessibility_service_label">FF Headshot Assist</string>
+    <string name="accessibility_description">Gesture injection for Free Fire headshot assist</string>
+    <string name="accessibility_summary">Headshot gesture targeting for Free Fire</string>
+</resources>

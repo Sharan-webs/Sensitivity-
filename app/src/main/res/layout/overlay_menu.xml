@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="220dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_overlay_card"
+    android:orientation="vertical"
+    android:padding="14dp"
+    android:elevation="16dp">
+
+    <!-- Header row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="12dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="MOD MENU"
+            android:textColor="#FF6B00"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1"/>
+        <Button
+            android:id="@+id/btnCloseMenu"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:text="✕"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            android:padding="0dp"
+            android:background="#66FF4444"/>
+    </LinearLayout>
+
+    <!-- Divider -->
+    <View android:layout_width="match_parent" android:layout_height="1dp"
+        android:background="#33FF6B00" android:layout_marginBottom="12dp"/>
+
+    <!-- Headshot Only row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HEADSHOT ONLY"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/tvHeadshotStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OFF"
+                android:textColor="#FF4444"
+                android:textSize="11sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <Switch
+            android:id="@+id/switchHeadshot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:thumbTint="#FF6B00"
+            android:trackTint="#333333"/>
+    </LinearLayout>
+
+</LinearLayout>

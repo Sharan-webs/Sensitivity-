@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D0D1A"
+    android:orientation="vertical"
+    android:padding="0dp">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1A1A2E"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="24dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FF HEADSHOT PANEL"
+            android:textColor="#FF6B00"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grant all permissions to enable injection"
+            android:textColor="#AAAAAA"
+            android:textSize="13sp"
+            android:layout_marginTop="4dp"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gap="10dp">
+
+            <!-- Overlay Permission -->
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card"
+                android:orientation="horizontal"
+                android:padding="14dp"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="10dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Draw Over Apps" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold"/>
+                    <TextView android:id="@+id/tvOverlayStatus" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="✗ Required"
+                        android:textColor="#FF4444" android:textSize="12sp"/>
+                </LinearLayout>
+                <Button android:id="@+id/btnGrantOverlay" android:layout_width="90dp"
+                    android:layout_height="38dp" android:text="GRANT"
+                    android:background="@drawable/bg_button" android:textColor="#FFFFFF"
+                    android:textSize="12sp" android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- Install Apps Permission -->
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card"
+                android:orientation="horizontal"
+                android:padding="14dp"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="10dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Install Unknown Apps (PIP)" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold"/>
+                    <TextView android:id="@+id/tvInstallStatus" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="✗ Required"
+                        android:textColor="#FF4444" android:textSize="12sp"/>
+                </LinearLayout>
+                <Button android:id="@+id/btnGrantInstall" android:layout_width="90dp"
+                    android:layout_height="38dp" android:text="GRANT"
+                    android:background="@drawable/bg_button" android:textColor="#FFFFFF"
+                    android:textSize="12sp" android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- All Files Access -->
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card"
+                android:orientation="horizontal"
+                android:padding="14dp"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="10dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="All Files Access" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold"/>
+                    <TextView android:id="@+id/tvFilesStatus" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="✗ Required"
+                        android:textColor="#FF4444" android:textSize="12sp"/>
+                </LinearLayout>
+                <Button android:id="@+id/btnGrantFiles" android:layout_width="90dp"
+                    android:layout_height="38dp" android:text="GRANT"
+                    android:background="@drawable/bg_button" android:textColor="#FFFFFF"
+                    android:textSize="12sp" android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- Usage Stats -->
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card"
+                android:orientation="horizontal"
+                android:padding="14dp"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="10dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Usage Stats (Game Detection)" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold"/>
+                    <TextView android:id="@+id/tvUsageStatus" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="✗ Required"
+                        android:textColor="#FF4444" android:textSize="12sp"/>
+                </LinearLayout>
+                <Button android:id="@+id/btnGrantUsage" android:layout_width="90dp"
+                    android:layout_height="38dp" android:text="GRANT"
+                    android:background="@drawable/bg_button" android:textColor="#FFFFFF"
+                    android:textSize="12sp" android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- Accessibility -->
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card"
+                android:orientation="horizontal"
+                android:padding="14dp"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="10dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Accessibility (Gesture Injection)" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold"/>
+                    <TextView android:id="@+id/tvAccessibilityStatus" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="✗ Required"
+                        android:textColor="#FF4444" android:textSize="12sp"/>
+                </LinearLayout>
+                <Button android:id="@+id/btnGrantAccessibility" android:layout_width="90dp"
+                    android:layout_height="38dp" android:text="GRANT"
+                    android:background="@drawable/bg_button" android:textColor="#FFFFFF"
+                    android:textSize="12sp" android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- Shizuku -->
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card"
+                android:orientation="horizontal"
+                android:padding="14dp"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="10dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Shizuku (Privileged Shell)" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold"/>
+                    <TextView android:id="@+id/tvShizukuStatus" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="Install Shizuku from Play Store"
+                        android:textColor="#FF4444" android:textSize="12sp"/>
+                </LinearLayout>
+                <Button android:id="@+id/btnGrantShizuku" android:layout_width="90dp"
+                    android:layout_height="38dp" android:text="GRANT"
+                    android:background="@drawable/bg_button" android:textColor="#FFFFFF"
+                    android:textSize="12sp" android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- Runtime Permissions -->
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card"
+                android:orientation="horizontal"
+                android:padding="14dp"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="10dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Phone + Storage Permissions" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold"/>
+                    <TextView android:id="@+id/tvRuntimeStatus" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="✗ Required"
+                        android:textColor="#FF4444" android:textSize="12sp"/>
+                </LinearLayout>
+                <Button android:id="@+id/btnGrantRuntime" android:layout_width="90dp"
+                    android:layout_height="38dp" android:text="GRANT"
+                    android:background="@drawable/bg_button" android:textColor="#FFFFFF"
+                    android:textSize="12sp" android:textStyle="bold"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Proceed button -->
+    <Button
+        android:id="@+id/btnProceed"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_margin="16dp"
+        android:text="PROCEED"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:background="@drawable/bg_button"
+        android:enabled="false"
+        android:alpha="0.5"
+        android:letterSpacing="0.08"/>
+</LinearLayout>
