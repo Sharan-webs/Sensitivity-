@@ -1,3 +1,2 @@
-FFHeadshotPanel build fix v2
-Fixed invalid android:gap resource attribute.
-Gradle 8.5 / JDK 17 GitHub Actions build configuration.
+FFHeadshotPanel build fix v3
+Removed invalid android:gap attribute from activity_permissions.xml.
