@@ -10,6 +10,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -20,17 +21,20 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v3
-        with:
-          gradle-version: '8.5'
+      - name: Download Gradle 8.5
+        run: |
+          curl -fL --retry 5 --retry-delay 2             https://services.gradle.org/distributions/gradle-8.5-bin.zip             -o /tmp/gradle-8.5-bin.zip
+          unzip -q /tmp/gradle-8.5-bin.zip -d /tmp
+          /tmp/gradle-8.5/bin/gradle --version
 
       - name: Build Debug APK
-        run: gradle assembleDebug
+        run: |
+          /tmp/gradle-8.5/bin/gradle assembleDebug --no-daemon --stacktrace
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: FFHeadshot-Debug-APK
           path: app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
           retention-days: 30
